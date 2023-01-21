@@ -79,8 +79,6 @@ def load_data(city, month, day):
     df['hour'] = df['Start Time'].dt.hour
 
     df = df
-    #print(df)
-    #filtering the df
 
     #filter df by user input for 'month'
     if month != 'all':
@@ -97,7 +95,6 @@ def load_data(city, month, day):
         index = days.index(day) 
         day = index
         df = df[df['day'] == day]
-    #print(df)
     return df
 
 def time_stats(df):
@@ -203,12 +200,9 @@ def user_stats(df, city):
     count_user_type = df['User Type'].value_counts()
     print('User Types:\n',count_user_type,'\n')
 
-    #print(df)
-
     if city=='washington':
         print('No Gender Data for {}'.format(city).title())
     else:
-        # print(city)
         # Display counts of gender
         count_gender = df['Gender'].value_counts()
         print('Gender Demographic:\n',count_gender,'\n')
