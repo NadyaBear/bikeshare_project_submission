@@ -6,11 +6,11 @@ Date this project was created was 1/1/2023.
 ### Project Title
 Bikeshare Project
 
-### Description
+### Description of the project
 The project takes in user input on the data the user would like to analyze. The user has the option to analyze data from three different cities - New York, Chicago, and Washington. From one of those cities - the user has the option to filter the data by month and/or day of the week.
 The input results in output of analytical data insights.
 
-### Files used
+### Files used for the project
 chicago.csv
 new_york_city.csv
 washington.csv
