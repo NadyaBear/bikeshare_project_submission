@@ -168,17 +168,17 @@ def trip_duration_stats(df):
     print("Total Travel Time is: {} {}".format(total_travel_time, time_scale))
 
     # Display mean travel time
-    # Adjust time scale to reflect friendly time_block annotation
+    # Adjust time scale to reflect friendly time_scale annotation
     average_travel_time = df['Trip Duration'].mean()
     if average_travel_time >360:
         average_travel_time = round(average_travel_time/360)
-        time_block = 'hours'
+        time_scale = 'hours'
     elif average_travel_time>60: 
         average_travel_time = round(average_travel_time/60)
-        time_block = 'minutes'
+        time_scale = 'minutes'
     else:
-        time_block = 'seconds'
-    print("Average Travel Time is: {} {}".format(average_travel_time, time_block ))
+        time_scale = 'seconds'
+    print("Average Travel Time is: {} {}".format(average_travel_time, time_scale ))
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
